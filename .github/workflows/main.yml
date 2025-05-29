@@ -1,0 +1,14 @@
+name: My First Workflow  # 工作流程的名称，你可以随意修改
+
+on: [push]  # 触发条件，这里表示每次 push 代码时都会运行
+
+jobs:
+  build:  # 任务名称
+    runs-on: ubuntu-latest  # 运行环境
+    
+    steps:  # 步骤列表
+    - name: Checkout code  # 获取代码
+      uses: actions/checkout@v4
+      
+    - name: Say hello  # 打印 Hello, World!
+      run: echo "Hello, World!"
